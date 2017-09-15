@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Search for a food product to see how much sugar it contains...
+
+  form(action="/" method="GET")
+    label(for="search")
+    input(type="text" name="search" autofocus)
+    button(type="submit") Search
