@@ -6,7 +6,7 @@ block content
 
   form(action="/fat-api/search" method="GET" id="searchForm")
     label(for="search")
-    input(type="text" name="search" required autofocus)
+    input(type="text" name="search" autocomplete="off" required autofocus)
     button(type="submit") Search
 
   ul#searchResult

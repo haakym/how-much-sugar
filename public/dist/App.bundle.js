@@ -84,7 +84,9 @@ searchForm.addEventListener('submit', async function (e) {
 
 	// build string, output to page!
 	var listStringTing = data.map(function (item) {
-		return '<li>' + item.food_name + ' - ' + item.food_description + '</li>';
+		// const carbs = /Carbs: (.*)g \|/g.exec(item.food_description)[1];
+
+		return '\n\t\t\t<li>\n\t\t\t\t<h2>' + item.food_name + '</h2>\n\t\t\t\t<h3>' + item.brand_name + '</h3>\n\t\t\t\t<p>' + item.food_description + '</p>\n\t\t\t</li>\n\t\t';
 	}).join("");
 
 	console.dir(listStringTing);

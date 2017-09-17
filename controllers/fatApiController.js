@@ -12,7 +12,8 @@ exports.search = (req, res) => {
       page_number: pageNumber
     })
     .then(function(results) {
-      // console.log(results.foods.food);
+      console.log('results.foods.food');
+      console.log(results.foods.food);
       
       res.json(results.foods.food);
     })

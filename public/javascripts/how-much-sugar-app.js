@@ -8,11 +8,19 @@ searchForm.addEventListener('submit', async (e) => {
 
 	const response = await fetch(`/fat-api/search?value=${search}`);
 
-	const data = await response.json()
+	const data = await response.json();
 
 	// build string, output to page!
 	const listStringTing = data.map(item => {
-		return `<li>${item.food_name} - ${item.food_description}</li>`;
+		// const carbs = /Carbs: (.*)g \|/g.exec(item.food_description)[1];
+
+		return `
+			<li>
+				<h2>${item.food_name}</h2>
+				<h3>${item.brand_name}</h3>
+				<p>${item.food_description}</p>
+			</li>
+		`;
 	}).join("");
 
 	console.dir(listStringTing);
