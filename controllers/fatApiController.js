@@ -2,7 +2,7 @@ const FatSecret = require('fatsecret');
 const fatAPI = new FatSecret(process.env.FATSECRET_KEY, process.env.FATSECRET_SECRET);
 
 exports.search = (req, res) => {
-  const searchQuery = req.query.search;
+  const searchQuery = req.query.value;
   const pageNumber = req.query.page || 1;
  
   fatAPI

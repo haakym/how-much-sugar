@@ -3,3 +3,4 @@ node_modules
 *.log
 .idea
 variables.env
+package-lock.json

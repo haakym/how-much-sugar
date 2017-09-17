@@ -4,10 +4,10 @@ block content
   h1= title
   p Search for a food product to see how much sugar it contains...
 
-  form(action="/fat-api/search" method="GET")
+  form(action="/fat-api/search" method="GET" id="searchForm")
     label(for="search")
-    input(type="text" name="search" autofocus)
+    input(type="text" name="search" required autofocus)
     button(type="submit") Search
 
-block scripts
+  ul#searchResult
     
